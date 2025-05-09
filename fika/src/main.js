@@ -143,7 +143,7 @@ function renderValoresCardsAlternative() {
   // Construir todo o HTML de uma vez
   const cardsHTML = valoresCards.map((card, index) => {
       return `
-          <div class="valor-card wow fadeInUp" data-wow-delay="${0.1 + (index * 0.1)}s">
+          <div class="valor-card wow animate__animated animate__fadeInDown animate_delay__1s" data-wow-delay="${0.1 + (index * 0.1)}s">
               <div class="valor-img">
                   <img src="${card.imagem}" alt="${card.titulo}">
                   <div class="valor-overlay"></div>
