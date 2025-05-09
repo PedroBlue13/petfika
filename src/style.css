@@ -524,6 +524,168 @@ nav {
   transform: translateY(0);
 }
 
+/* Estilos para a seção de localização */
+.localizacao {
+    padding: 100px 0;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+.localizacao-flex {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.localizacao-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.localizacao-mapa {
+    flex: 1.2;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 450px;
+}
+
+.localizacao-mapa iframe {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bege-amen);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-content h3 {
+    color: var(--bege-amen);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.info-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-whatsapp, .btn-route {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.btn-route {
+    background-color: var(--bege-amen);
+    color: white;
+}
+
+.btn-whatsapp:hover, .btn-route:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-whatsapp:hover {
+    background-color: #20bd5a;
+}
+
+.btn-route:hover {
+    background-color: #b39988;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .localizacao-flex {
+        flex-direction: column;
+    }
+    
+    .localizacao-mapa {
+        order: -1;
+        height: 350px;
+    }
+    
+    .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .cta-buttons .btn {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .info-item {
+        padding: 15px;
+    }
+    
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+
+
 .depoimentos {
   padding: 100px 0;
   background-color: var(--branco-neutro);
